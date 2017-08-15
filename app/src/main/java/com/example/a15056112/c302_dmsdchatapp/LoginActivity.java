@@ -112,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 Log.w(TAG, "isEmailVerified ? " + user.isEmailVerified());
 
-                                if (user.getUid().equals("") && user.isEmailVerified()) {
+                                if (user.getUid().equals("")) {
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                     startActivity(intent);
                                 } else if(!user.getUid().equals("")) {
@@ -139,7 +139,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if(mAuth.getCurrentUser()!= null){
-            Intent i = new Intent(this, MainActivity.class);
+            Intent i = new Intent(this, ChatActivity.class);
             startActivity(i);
         }
     }
