@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "884963053646",
+    "firebase_url": "https://c302-dmsd-chat-app-2747b.firebaseio.com",
+    "project_id": "c302-dmsd-chat-app-2747b",
+    "storage_bucket": "c302-dmsd-chat-app-2747b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884963053646:android:86efbfe41b220b23",
+        "android_client_info": {
+          "package_name": "com.example.a15056112.c302_dmsdchatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884963053646-osqv2c1p4dua9dleess98j73pqcb2hvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh3kfAZhd9KL7zGhwCxJbdOdxVKGoSf8o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
