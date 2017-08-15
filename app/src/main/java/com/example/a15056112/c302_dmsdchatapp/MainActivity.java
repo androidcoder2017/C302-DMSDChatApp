@@ -46,12 +46,11 @@ public class MainActivity extends AppCompatActivity {
         nameReference = firebaseDatabase.getReference("profiles/" + firebaseUser.getUid());
 
 
-        /*
         nameReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String name = dataSnapshot.getValue(String.class);
-                if (name == null || name.equalsIgnoreCase("")) {
+                if (name.equalsIgnoreCase("")) {
                     Intent intent = new Intent(MainActivity.this, ChatActivity.class);
                     startActivity(intent);
                 }
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        }); */
+        });
 
         btnName.setOnClickListener(new View.OnClickListener() {
             @Override

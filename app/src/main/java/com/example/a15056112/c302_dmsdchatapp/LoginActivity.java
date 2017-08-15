@@ -111,12 +111,15 @@ public class LoginActivity extends AppCompatActivity {
                             }else{
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 Log.w(TAG, "isEmailVerified ? " + user.isEmailVerified());
-                                if (user.isEmailVerified()) {
-                                    Intent i = new Intent(getBaseContext(), MainActivity.class);
-                                    startActivity(i);
-                                } else {
-                                    Toast.makeText(LoginActivity.this, "Please proceed to verify your email first.", Toast.LENGTH_SHORT).show();
+
+                                if (user.getUid().equals("") && user.isEmailVerified()) {
+                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    startActivity(intent);
+                                } else if(!user.getUid().equals("")) {
+                                    Intent intent = new Intent(LoginActivity.this, ChatActivity.class);
+                                    startActivity(intent);
                                 }
+
                             }
                         }
                     });
